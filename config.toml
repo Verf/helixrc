@@ -1,0 +1,69 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 999
+cursorline = true
+auto-save = true
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[keys.normal]
+y = "move_char_left"
+n = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
+d = "move_next_word_end"
+D = "move_next_long_word_end"
+k = "find_till_char"
+t = "find_next_char"
+K = "till_prev_char"
+T = "find_prev_char"
+f = "replace"
+F = "replace_with_yanked"
+r = "insert_mode"
+R = "insert_at_line_start"
+l = "open_below"
+L = "open_above"
+j = "yank"
+h = "collapse_selection"
+H = "command_mode"
+";" = "paste_after"
+":" = "paste_before"
+e = "delete_selection"
+N = "join_selections"
+I = "keep_selections"
+p = "search_next"
+P = "search_prev"
+
+[keys.select]
+y = "move_char_left"
+n = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
+d = "move_next_word_end"
+D = "move_next_long_word_end"
+k = "find_till_char"
+t = "find_next_char"
+K = "till_prev_char"
+T = "find_prev_char"
+f = "replace"
+F = "replace_with_yanked"
+r = "insert_mode"
+R = "insert_at_line_start"
+l = "open_below"
+L = "open_above"
+j = "yank"
+h = "collapse_selection"
+H = "command_mode"
+";" = "paste_after"
+":" = "paste_before"
+e = "delete_selection"
+N = "join_selections"
+I = "keep_selections"
+p = "search_next"
+P = "search_prev"
