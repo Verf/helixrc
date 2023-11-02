@@ -1,16 +1,33 @@
-theme = "onedark"
+theme = "dracula"
 
 [editor]
-line-number = "relative"
 mouse = false
 scrolloff = 999
+idle-timeout = 200
+
+line-number = "relative"
+bufferline = "multiple"
 cursorline = true
-auto-save = true
 true-color = true
+color-modes = true
+
+auto-format = false
+auto-save = true
+auto-pairs = false
+default-line-ending = "lf"
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
+
+[editor.statusline]
+left = ["mode", "spinner","diagnostics"]
+center = ["file-name"]
+right = ["selections", "position", "file-encoding", "file-line-ending", "read-only-indicator", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [keys.normal]
 y = "move_char_left"
@@ -32,21 +49,50 @@ L = "open_above"
 j = "yank"
 h = "collapse_selection"
 H = "command_mode"
-";" = "paste_after"
-":" = "paste_before"
 e = "delete_selection"
 N = "join_selections"
 I = "keep_selections"
 p = "search_next"
 P = "search_prev"
+";" = "paste_after"
+":" = "paste_before"
+"tab" = ":buffer-next"
+"S-tab" = ":buffer-previous"
+
+[keys.normal.z]
+n = "scroll_down"
+i = "scroll_up"
+
+[keys.normal."space"]
+m = ":fmt"
+
+[keys.normal."space".q]
+q = ":buffer-close"
+w = ":write-buffer-close"
+a = ":write-quit-all"
+
+[keys.normal."space".w]
+h = "no_op"
+j = "no_op"
+k = "no_op"
+l = "no_op"
+"C-h" = "no_op"
+"C-j" = "no_op"
+"C-k" = "no_op"
+"C-l" = "no_op"
+y = "jump_view_left"
+n = "jump_view_down"
+i = "jump_view_up"
+o = "jump_view_right"
+c = "wonly"
 
 [keys.select]
-y = "move_char_left"
-n = "move_visual_line_down"
-i = "move_visual_line_up"
-o = "move_char_right"
-d = "move_next_word_end"
-D = "move_next_long_word_end"
+y = "extend_char_left"
+o = "extend_char_right"
+n = "extend_visual_line_down"
+i = "extend_visual_line_up"
+d = "extend_next_word_end"
+D = "extend_next_long_word_end"
 k = "find_till_char"
 t = "find_next_char"
 K = "till_prev_char"
@@ -60,10 +106,10 @@ L = "open_above"
 j = "yank"
 h = "collapse_selection"
 H = "command_mode"
-";" = "paste_after"
-":" = "paste_before"
 e = "delete_selection"
 N = "join_selections"
 I = "keep_selections"
 p = "search_next"
 P = "search_prev"
+";" = "paste_after"
+":" = "paste_before"
