@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "deepwhite"
 
 [editor]
 mouse = false
@@ -24,10 +24,12 @@ normal = "block"
 left = ["mode", "spinner","diagnostics"]
 center = ["file-name"]
 right = ["selections", "position", "file-encoding", "file-line-ending", "read-only-indicator", "file-type"]
-separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
 
 [keys.normal]
 y = "move_char_left"
@@ -58,6 +60,8 @@ P = "search_prev"
 ":" = "paste_before"
 "tab" = ":buffer-next"
 "S-tab" = ":buffer-previous"
+"A-h" = "flip_selections"
+"A-H" = "ensure_selections_forward"
 
 [keys.normal.z]
 n = "scroll_down"
