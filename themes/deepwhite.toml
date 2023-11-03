@@ -10,6 +10,7 @@
 "keyword.function" = { fg = "base0", bg = "light-purple" }
 "operator" = "base0"
 "function" = "base0"
+"function.method" = "blue"
 "function.builtin" = "pink"
 "function.macro" = "pink"
 "tag" = "blue"
