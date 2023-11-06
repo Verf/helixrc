@@ -13,7 +13,7 @@ color-modes = true
 
 auto-format = false
 auto-save = true
-auto-pairs = false
+
 default-line-ending = "lf"
 
 [editor.cursor-shape]
@@ -30,6 +30,10 @@ mode.select = "SELECT"
 
 [editor.indent-guides]
 render = true
+
+[editor.smart-tab]
+enable = false
+supersede-menu = true
 
 [keys.normal]
 y = "move_char_left"
@@ -56,22 +60,27 @@ N = "join_selections"
 I = "keep_selections"
 p = "search_next"
 P = "search_prev"
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+"G" = "goto_last_line"
+
 ";" = "paste_after"
 ":" = "paste_before"
 "tab" = ":buffer-next"
 "S-tab" = ":buffer-previous"
-"A-h" = "flip_selections"
-"A-H" = "ensure_selections_forward"
 
 [keys.normal.z]
 n = "scroll_down"
 i = "scroll_up"
 
+[keys.normal.m]
+r = "select_textobject_inner"
+
 [keys.normal."space"]
 m = ":fmt"
 
 [keys.normal."space".q]
-q = ":buffer-close"
+q = ":buffer-close!"
 w = ":write-buffer-close"
 a = ":write-quit-all"
 
@@ -117,3 +126,6 @@ p = "search_next"
 P = "search_prev"
 ";" = "paste_after"
 ":" = "paste_before"
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+"G" = "goto_last_line"

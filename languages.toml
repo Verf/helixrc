@@ -1,6 +1,18 @@
 [[language]]
 name = "python"
-language-servers = [ "pyright" ]
+language-servers = [ "pyright", "ruff" ]
 
-[language-server.volar]
-command = "volar" 
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoImportCompletions = true
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language.formatter]
+command = "black"
+args = ["--preview", "--quiet", "-"]
