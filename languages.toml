@@ -8,6 +8,7 @@ args = ["--stdio"]
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
+useLibraryCodeForTypes = false
 autoImportCompletions = true
 
 [language-server.ruff]
