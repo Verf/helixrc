@@ -39,9 +39,5 @@ name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [[language]]
-name = "tsx"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-
-[[language]]
 name = "vue"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+formatter = { command = 'prettier', args = ["--parser", "vue"] }
