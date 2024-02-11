@@ -1,0 +1,157 @@
+# a
+[[snippets]]
+prefix = "a"
+body = "assert"
+
+# b
+[[snippets]]
+prefix = "b"
+body = "break"
+
+# c
+[[snippets]]
+prefix = "c"
+body = "continue"
+
+[[snippets]]
+prefix = "cl"
+body = "class $1:\n\t${0:pass}"
+
+[[snippets]]
+prefix = "cli"
+body = "class $1:\n\tdef __init__(self$2) -> None:\n\t\t${0:pass}"
+
+[[snippets]]
+prefix = "cu"
+body = "# -*- coding: utf-8 -*-"
+
+# d
+[[snippets]]
+prefix = "d"
+body = "def $1($2) -> $3:\n\t$0"
+
+# e
+
+# f
+[[snippets]]
+prefix = "f"
+body = "for ${1:item} in ${2:items}:\n\t$0"
+
+[[snippets]]
+prefix = "fi"
+body = "from ${1:package} import ${0:module}"
+
+# g
+[[snippets]]
+prefix = "g"
+body = "global"
+
+# h
+
+# i
+[[snippets]]
+prefix = "i"
+body = "import $0"
+
+[[snippets]]
+prefix = "ifm"
+body = "if __name__ == '__main__':\n\t${0:main()}"
+
+# j
+
+# k
+
+# l
+[[snippets]]
+prefix = "l"
+body = "lambda $1: $0"
+
+[[snippets]]
+prefix = "ld"
+body = "logging.debug($0)"
+
+[[snippets]]
+prefix = "li"
+body = "logging.info($0)"
+
+[[snippets]]
+prefix = "lw"
+body = "logging.warning($0)"
+
+[[snippets]]
+prefix = "le"
+body = "logging.error($0)"
+
+# m
+
+# n
+
+# o
+
+# p
+[[snippets]]
+prefix = "p"
+body = "pass"
+
+# q
+
+# r
+[[snippets]]
+prefix = "r"
+body = "return $0"
+
+[[snippets]]
+prefix = "ra"
+body = "raise ${0:Exception}"
+
+[[snippets]]
+prefix = "rai"
+body = "raise ${0:Exception}"
+
+# s
+[[snippets]]
+prefix = "s."
+body = "self."
+
+# t
+[[snippets]]
+prefix = "t"
+body = "try:\n\t$1\nexcept ${2:Exception}$3:\n\t$0"
+
+[[snippets]]
+prefix = "tf"
+body = "try:\n\t$1\nfinally:\n\t$0"
+
+[[snippets]]
+prefix = "tef"
+body = "try:\n\t$1\nexcept ${2:Exception}$3:\n\t$4\nfinally:\n\t$0"
+
+# u
+
+# v
+
+# w
+[[snippets]]
+prefix = "w"
+body = "while $1:\n\t$0"
+
+[[snippets]]
+prefix = "wi"
+body = "with ${1:expr} as ${2:var}:\n\t$0"
+
+[[snippets]]
+prefix = "wr"
+body = "with open('$1', '${2:r}', encoding='${3:utf-8}') as ${4:f}:\n\t$0"
+
+[[snippets]]
+prefix = "ww"
+body = "with open('$1', '${2:w}', encoding='${3:utf-8}', newline='${4:\\n}') as ${5:fw}:\n\t$0"
+
+# x
+
+# y
+[[snippets]]
+prefix = "y"
+body = "yield $0"
+
+# z

@@ -3,7 +3,8 @@ theme = "deepwhite"
 [editor]
 mouse = false
 scrolloff = 999
-idle-timeout = 200
+idle-timeout = 100
+completion-trigger-len = 1
 
 line-number = "relative"
 bufferline = "multiple"
