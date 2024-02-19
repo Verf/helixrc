@@ -1,0 +1,3 @@
+[[snippets]]
+prefix = "csl"
+body = "console.log($0)"
