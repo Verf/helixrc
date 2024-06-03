@@ -35,11 +35,7 @@ body = "def $1($2) -> $3:\n\t$0"
 # f
 [[snippets]]
 prefix = "f"
-body = "for ${1:item} in ${2:items}:\n\t$0"
-
-[[snippets]]
-prefix = "fi"
-body = "from ${1:package} import ${0:module}"
+body = "for $0:"
 
 # g
 [[snippets]]
