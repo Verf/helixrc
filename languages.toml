@@ -10,24 +10,19 @@ feature_unicode_input = true # enable "unicode input"
 
 [[language]]
 name = "python"
-language-servers = ["scls", "pyright", "ruff-lsp"]
+language-servers = ["scls", "pyright", "ruff"]
 
 [language-server.pyright]
-command = "pyright-langserver"
+command = "pyright"
 args = ["--stdio"]
+except-features = ["format", "code-action"]
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
-useLibraryCodeForTypes = false
-autoImportCompletions = true
 
-[language-server.ruff-lsp]
-command = "ruff-lsp"
-config = { settings = { run = "onSave" } }
-
-[language.formatter]
-command = "black"
-args = ["--preview", "--quiet", "-"]
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--preview"]
 
 [[language]]
 name = "rust"
