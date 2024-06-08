@@ -10,14 +10,14 @@ feature_unicode_input = true # enable "unicode input"
 
 [[language]]
 name = "python"
-language-servers = ["scls", "pyright", "ruff"]
+language-servers = ["scls", "basedpyright", "ruff"]
 
-[language-server.pyright]
-command = "pyright"
-args = ["--stdio"]
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio", "--pythonversion 3.6"]
 except-features = ["format", "code-action"]
 
-[language-server.pyright.config.python.analysis]
+[language-server.basedpyright.config.python.analysis]
 typeCheckingMode = "basic"
 
 [language-server.ruff]
