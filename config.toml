@@ -3,28 +3,35 @@ theme = "deepwhite"
 [editor]
 mouse = false
 scrolloff = 999
-idle-timeout = 100
-completion-trigger-len = 1
+idle-timeout = 150
 
 line-number = "relative"
 bufferline = "multiple"
+
 cursorline = true
 true-color = true
 color-modes = true
 
-auto-format = false
-auto-save = true
-
 default-line-ending = "lf"
+
+[editor.auto-save]
+focus-lost = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 
 [editor.statusline]
-left = ["mode", "spinner","diagnostics"]
+left = ["mode", "spinner", "diagnostics"]
 center = ["file-name"]
-right = ["selections", "position", "file-encoding", "file-line-ending", "read-only-indicator", "file-type"]
+right = [
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "read-only-indicator",
+  "file-type",
+]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
@@ -70,6 +77,8 @@ c = "change_selection_noyank"
 ":" = "paste_before"
 "tab" = ":buffer-next"
 "S-tab" = ":buffer-previous"
+
+"*" = ["move_prev_word_start", "move_next_word_end", "search_selection"]
 
 [keys.normal.z]
 n = "scroll_down"
@@ -156,3 +165,14 @@ P = "search_prev"
 "G" = "goto_last_line"
 "A-h" = "flip_selections"
 "A-H" = "ensure_selections_forward"
+
+[keys.select."space"]
+m = ":fmt"
+y = "no_op"
+Y = "no_op"
+j = "yank_to_clipboard"
+J = "yank_main_selection_to_clipboard"
+p = "no_op"
+P = "no_op"
+";" = "paste_clipboard_after"
+":" = "paste_clipboard_before"

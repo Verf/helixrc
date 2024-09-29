@@ -1,24 +1,11 @@
-[language-server.scls]
-command = "simple-completion-language-server"
-
-[language-server.scls.config]
-max_completion_items = 10    # set max completion results len for each group: words, snippets, unicode-input
-snippets_first = true        # completions will return before snippets by default
-feature_words = true         # enable completion by word
-feature_snippets = true      # enable snippets
-feature_unicode_input = true # enable "unicode input"
-
 [[language]]
 name = "python"
-language-servers = ["scls", "basedpyright", "ruff"]
+language-servers = ["basedpyright", "ruff"]
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
-args = ["--stdio", "--pythonversion 3.6"]
+args = ["--stdio"]
 except-features = ["format", "code-action"]
-
-[language-server.basedpyright.config.python.analysis]
-typeCheckingMode = "basic"
 
 [language-server.ruff]
 command = "ruff"
@@ -27,10 +14,6 @@ args = ["server", "--preview"]
 [[language]]
 name = "rust"
 language-servers = ["scls", "rust-analyzer"]
-
-[[language]]
-name = "git-commit"
-language-servers = ["scls"]
 
 [[language]]
 name = "html"
@@ -55,13 +38,3 @@ formatter = { command = "prettier", args = ["--parser", "typescript"] }
 [[language]]
 name = "vue"
 formatter = { command = "prettier", args = ["--parser", "vue"] }
-language-servers = ["scls", "vue-language-server"]
-
-[[language]]
-name = "stub"
-scope = "text.stub"
-file-types = []
-shebangs = []
-roots = []
-auto-format = false
-language-servers = ["scls"]
