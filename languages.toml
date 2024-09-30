@@ -7,13 +7,18 @@ command = "basedpyright-langserver"
 args = ["--stdio"]
 except-features = ["format", "code-action"]
 
+[language-server.basedpyright.config.basedpyright.analysis]
+autoSearchPaths = true
+typeCheckingMode = "basic"
+diagnosticMode = "openFilesOnly"
+
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
 
 [[language]]
 name = "rust"
-language-servers = ["scls", "rust-analyzer"]
+language-servers = ["rust-analyzer"]
 
 [[language]]
 name = "html"
