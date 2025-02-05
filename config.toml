@@ -13,6 +13,7 @@ true-color = true
 color-modes = true
 
 default-line-ending = "lf"
+end-of-line-diagnostics = "hint"
 
 [editor.auto-save]
 focus-lost = true
@@ -40,8 +41,11 @@ mode.select = "SELECT"
 render = true
 
 [editor.smart-tab]
-enable = false
-supersede-menu = true
+enable = true
+supersede-menu = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [keys.normal]
 y = "move_char_left"
@@ -132,6 +136,10 @@ Y = "swap_view_left"
 N = "swap_view_down"
 I = "swap_view_up"
 O = "swap_view_right"
+
+[keys.insert]
+"C-n" = "goto_next_tabstop"
+"C-i" = "goto_prev_tabstop"
 
 [keys.select]
 y = "extend_char_left"

@@ -1,6 +1,15 @@
-[[language]]
-name = "python"
-language-servers = ["basedpyright", "ruff"]
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 20
+feature_words = true
+feature_snippets = true
+snippets_first = true
+snippets_inline_by_word_tail = false
+feature_unicode_input = false
+feature_paths = false
+feature_citations = false
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -17,8 +26,8 @@ command = "ruff"
 args = ["server", "--preview"]
 
 [[language]]
-name = "rust"
-language-servers = ["rust-analyzer"]
+name = "python"
+language-servers = ["basedpyright", "ruff", "scls"]
 
 [[language]]
 name = "html"
