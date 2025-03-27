@@ -84,6 +84,7 @@ c = "change_selection_noyank"
 "S-tab" = ":buffer-previous"
 
 "*" = ["move_prev_word_start", "move_next_word_end", "search_selection"]
+"^" = [":pipe into string | split row \"\\n\" | sort | uniq | str join \"\\n\""]
 
 [keys.normal.z]
 n = "scroll_down"
@@ -174,6 +175,8 @@ P = "search_prev"
 "G" = "goto_last_line"
 "A-h" = "flip_selections"
 "A-H" = "ensure_selections_forward"
+
+"^" = [":pipe into string | split row \"\\n\" | sort | uniq | str join \"\\n\""]
 
 [keys.select."space"]
 m = ":fmt"
