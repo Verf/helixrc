@@ -103,8 +103,6 @@ c = "surround_replace"
 [keys.normal."space"]
 m = ":fmt"
 F = "file_picker_in_current_buffer_directory"
-";" = "paste_clipboard_after"
-":" = "paste_clipboard_before"
 
 [keys.normal."space".q]
 q = ":buffer-close!"
