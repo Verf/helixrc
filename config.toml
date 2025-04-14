@@ -108,6 +108,7 @@ j = "yank_to_clipboard"
 J = "yank_main_selection_to_clipboard"
 p = "no_op"
 P = "no_op"
+F = "file_picker_in_current_buffer_directory"
 ";" = "paste_clipboard_after"
 ":" = "paste_clipboard_before"
 
