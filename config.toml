@@ -12,6 +12,8 @@ bufferline = "multiple"
 cursorline = true
 true-color = true
 color-modes = true
+auto-format = true
+continue-comments = false
 
 default-line-ending = "lf"
 end-of-line-diagnostics = "hint"
@@ -25,24 +27,20 @@ normal = "block"
 
 [editor.statusline]
 left = ["mode", "spinner", "diagnostics"]
-center = ["file-name"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator"]
 right = [
+  "version-control",
   "selections",
   "position",
   "file-encoding",
   "file-line-ending",
-  "read-only-indicator",
-  "file-type",
 ]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
 
 [editor.indent-guides]
 render = true
 
 [editor.smart-tab]
-enable = true
+enable = false
 supersede-menu = false
 
 [editor.inline-diagnostics]
