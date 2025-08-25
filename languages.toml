@@ -1,33 +1,16 @@
-[language-server.scls]
-command = "simple-completion-language-server"
-
-[language-server.scls.config]
-max_completion_items = 20
-feature_words = true
-feature_snippets = true
-snippets_first = true
-snippets_inline_by_word_tail = false
-feature_unicode_input = false
-feature_paths = false
-feature_citations = false
-
-[language-server.basedpyright]
-command = "basedpyright-langserver"
-args = ["--stdio"]
-except-features = ["format", "code-action"]
-
-[language-server.basedpyright.config.basedpyright.analysis]
-autoSearchPaths = true
-typeCheckingMode = "basic"
-diagnosticMode = "openFilesOnly"
-
-[language-server.ruff]
-command = "ruff"
-args = ["server", "--preview"]
+[language-server.ty]
+command = "ty"
+args = ["server"]
+config = { experimental = { rename = true } }
 
 [[language]]
 name = "python"
-language-servers = ["basedpyright", "ruff", "scls"]
+auto-format = true
+language-servers = ["ty", "ruff"]
+
+[[language]]
+name = "toml"
+auto-format = true
 
 [[language]]
 name = "html"
@@ -51,4 +34,5 @@ formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
 [[language]]
 name = "vue"
-formatter = { command = "prettier", args = ["--parser", "vue"] }
+formatter = { command = 'prettier', args = ["--parser", "vue"] }
+roots = ["package.json", "vue.config.js"]
